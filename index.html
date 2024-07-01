@@ -5,19 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIM— AI Modernism Of Kharkiv</title>
-    <link rel="shortcut icon" href="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/6565d9371a89f4b7b7915000_Favicon-2.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/6565d9371a89f4b7b7915000_Favicon-2.png"
+        type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
         @font-face {
             font-family: font;
             src: url(./6543bff01f0d36db2117a101_KHTekaTRIAL-Medium.ttf);
         }
+
+        .learn:hover i {
+            transform: translateX(100%)
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div id="loader" class="w-full h-screen bg-[#141414] fixed top-0 left-0 z-[999] flex items-center justify-center ">
+    <div id="loader"
+        class="w-full h-screen bg-[#141414] fixed top-0 left-0 z-[999] flex items-center justify-center ">
         <div class="box w-[10vw] h-[10vw] flex mt-[15vw] relative">
             <div style="clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);"
                 class="strip  w-[35%] h-full bg-zinc-100 absolute left-0"></div>
@@ -27,35 +34,57 @@
                 class="strip w-[35%] h-full bg-zinc-100 absolute right-0"></div>
         </div>
     </div>
-    <div
-        class="nav w-full h-[3vw] font-[font] flex items-center justify-between fixed z-50 bg-[#E7E4DF] px-[1vw] border-b-[.1vw] border-black top-[-3vw]">
-        <h4 class=" text-[1vw]">AI Modernism of Kharkiv [Ukraine]</h4>
-        <h4 class="text-[1vw]">Index / Experiment / About</h4>
-        <h4 class="text-[1vw]">[Gallery]</h4>
-        <h4 class="text-[1vw]">Obys Agency ©2023</h4>
+    <div class="nav z-40 w-full h-[7vh] sm:h-[3vw] font-[font] flex items-center justify-between fixed z-50 bg-[#E7E4DF] px-[1vw] border-b-[.1vw] border-black top-[-100%]">
+        <h4 class="text-[1vw] hidden sm:block">AI Modernism of Kharkiv [Ukraine]</h4>
+        <h4 class="text-[1vw] hidden sm:block">Index / Experiment / About</h4>
+        <h4 class="text-[1vw] hidden sm:block">[Gallery]</h4>
+        <h4 class="text-[1vw] hidden sm:block">Obys Agency ©2023</h4>
+        <h4 id="open" class="text-[4vw] block sm:hidden pl-[5vw]">Menu</h4>
     </div>
-    <div class="w-[12.5vw] st i1 h-[22.5vw] bg-[#141414] fixed top-[2%] right-[50%] origin-top-left"></div>
+    <div id="navigation" style="clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);" class="block sm:hidden bg-[#18181A] text-white/80 flex flex-col justify-between  font-[font] z-50 fixed top-0 left-0 p-[5vw] w-full h-screen">
+        <div class="flex flex-col gap-[20vh]">
+            <h4 id="close" class="text-4vw font-semibold">Close</h4>
+        <div class="menu-txt">
+            <div class="overflow-hidden h-[14vw]">
+                <h4 class="text-[15vw] leading-none text-white/50">Index</h4>
+            </div>
+            <div class="overflow-hidden h-[14vw]">
+                <h4 class="text-[15vw] leading-none">Experiment</h4>
+            </div>
+            <div class="overflow-hidden h-[14vw]">
+                <h4 class="text-[15vw] leading-none">About</h4>
+            </div>
+        </div>
+        </div>
+        <div class="w-full bottm flex flex-col gap-16 border-t border-white">
+            <h3>An AI Experiment<br>Based on the Kharkiv Modernism.</h3>
+            <h3>Obys Agency ©2023</h3>
+        </div>
+    </div>   
+    <div id="main" class="bg-[#E7E4DF]  text-[#141414]  font-[font] overflow-hidden">
+        <div class="w-[12.5vw] st i1 h-[22.5vw] bg-[#141414] fixed top-[2%] right-[50%] origin-top-left"></div>
     <div class="w-[12.5vw] st i2 h-[22.5vw] bg-[#141414] fixed top-[2%] right-[50%]"></div>
     <div class="w-[12.5vw] st i3 h-[22.5vw] bg-[#141414] fixed top-[2%] right-[50%]"></div>
     <div class="w-[12.5vw] st i4 h-[22.5vw] bg-[#141414] fixed top-[2%] left-[50%]"></div>
     <div class="w-[12.5vw] st i5 h-[22.5vw] bg-[#141414] fixed top-[2%] left-[50%] origin-top-right"></div>
     <div class="w-[12.5vw] st i6 h-[22.5vw] bg-[#141414] fixed top-[2%] left-[50%] origin-top-left"></div>
     <div class="w-[12.5vw] st i7 h-[22.5vw] bg-[#141414] fixed top-[2%] left-[50%]"></div>
-    <div id="main" class="bg-[#E7E4DF]  text-[#141414]  font-[font] overflow-hidden">
-        <div id="page1" class="w-full h-screen flex flex-col justify-end px-[1vw]">
+        <div id="page1" class="relative w-full h-screen flex flex-col justify-between sm:justify-end pt-[3vw] sm:pt-[0vw] px-[5vw] sm:px-[1vw]">
+            <h4 id="open" class="text-[4vw] block sm:hidden top-0 left-0">Menu</h4>
             <div style="clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);" class="black w-full h-[3vw] bg-[#141414]"></div>
-            <div
-                class="text1 w-full h-[3vw] flex items-center justify-between border-b-[.1vw] border-t-[.1vw] border-black">
+            <div class="hidden sm:flex text1 w-full h-[3vw] flex items-center justify-between">
                 <h4 class="text-[1vw]">AI Modernism of Kharkiv [Ukraine]</h4>
                 <h4 class="text-[1vw]">Index / Experiment / About</h4>
                 <h4 class="text-[1vw]">[Gallery]</h4>
                 <h4 class="text-[1vw]">Obys Agency ©2023</h4>
             </div>
-            <div class="w-full h-[20vw] flex border-b-[.1vw] border-black">
-                <div class="left w-[32%] h-full pb-[2vw] flex items-end border-r-[.1vw] border-black">
-                    <div class="flex gap-[4vw]">
-                        <h5 class="text-[.9vw]">Modernists:</h5>
-                        <h5 class="text-[.9vw]">E01: Anatol Petrytskiy <br>
+            <div class="w-full h-[40vh] sm:h-[20vw] flex flex-col sm:flex-row relative">
+                <div class="line1 w-full h-[1px] absolute bg-zinc-900 top-[60%] sm:top-0 left-0"></div>
+                <div class="left w-full sm:w-[32.6%] h-1/2 sm:h-full pb-[.8vw] flex items-end relative">
+                    <div class="line2 hidden sm:block w-[1px] h-full absolute bg-zinc-900 top-0 right-0"></div>
+                    <div class="lefttxt flex gap-[12vw]">
+                        <h5 class="text-[4vw] sm:text-[1vw]">Modernists:</h5>
+                        <h5 class="text-[4vw] sm:text-[1vw] leading-none">E01: Anatol Petrytskiy <br>
                             E02: Vasyl Ermilov <br>
                             E03: Oleksandr Khvostenko-Khvostov <br>
                             E04: Borys Kosarev <br>
@@ -63,20 +92,32 @@
                     </div>
 
                 </div>
-                <div class="right w-[68%] h-full pb-[2vw] pl-[1vw] flex flex-col justify-end">
-                    <div class="h-[4.5vw] overflow-hidden">
-                        <h1 class="text-[5.5vw] leading-[.8] ">AIM—</h1>
+                <div class="right w-full sm:w-[67.4%] h-1/2 sm:h-full pt-[12vw] sm:pt-[0vw] sm:pb-[.5vw] pl-[1vw] flex items-start sm:items-end flex-row-reverse sm:flex-row justify-between">
+                    <div class="w-[65%] sm:w-[80%]">
+                        <div class="h-[7.5vw] sm:h-[4.5vw] overflow-hidden sm:mb-2">
+                            <h1 class="text-[8vw] sm:text-[5vw] leading-none">AIM—</h1>
+                        </div>
+                        <div class="h-[7.5vw] sm:h-[4.5vw] overflow-hidden sm:mb-2">
+                            <h1 class="text-[8vw] sm:text-[5vw] leading-none">AI Modernism</h1>
+                        </div>
+                        <div class="h-[7.5vw] sm:h-[4.5vw] overflow-hidden sm:mb-2">
+                            <h1 class="text-[8vw] sm:text-[5vw] leading-none">Of Kharkiv</h1>
+                        </div>
                     </div>
-                    <div class="h-[4.5vw] overflow-hidden">
-                        <h1 class="text-[5.5vw] leading-none">AI Modernism</h1>
-                    </div>
-                    <div class="h-[4.5vw] overflow-hidden">
-                        <h1 class="text-[5.5vw] leading-none">Of Kharkiv</h1>
+                    <div class="scrollbtn flex gap-2 items-center">
+                        <h2 class="hidden sm:block font-thin">Scroll to Explore</h2>
+                        <h2 class="block sm:hidden font-thin h-fit">Explore</h2>
+                        <svg class="w-[3vw] sm:w-[.7vw]" width="100%" height="100%" viewBox="0 0 11 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.875 11.6055L10.875 6.55588L10.875 4.78156L6.50218 9.15438L6.50218 -1.91142e-07L5.24782 -2.45972e-07L5.24782 9.15438L0.875 4.78156L0.87567 6.55588L5.875 11.6055Z"
+                                fill="currentColor"></path>
+                        </svg>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="page2" class="w-full min-h-screen pt-[20vw] px-[1vw]">
+        <div id="page2" class="hidden sm:block w-full min-h-screen pt-[20vw] px-[1vw]">
             <div class="h-[5vw] overflow-hidden relative z-10  text-zinc-800">
                 <h1 class="text-[5vw] leading-none">This AI experiment delves into a</h1>
             </div>
@@ -125,23 +166,57 @@
                 <h4 class="text-[.9vw]">[***] — Experiment produced by Obys</h4>
             </div>
         </div>
-        <div id="page3" class="w-full h-screen relative">
-            <div class="w-[66.6%] h-full absolute flex pt-[4vw]">
-                <div class="text2 w-[75%] h-full">
-                    <div class="h-[9vw] overflow-hidden">
-                        <h1 class="text-[9vw] leading-none translate-y-full">Explore</h1>
+        <div id="page2-mobile" class="block sm:hidden w-full h-[165vh]  p-[5vw] pt-[25vh]">
+            <h1 class="text-[9vw] leading-none">This AI experiment delves into a contemporary reimagining of the Kharkiv
+                Modernism <sup class="text-xs">[**]</sup> movement from 1910 to
+                1930. Drawing inspiration from the
+                garde artists and intellectuals of that era,
+                we employ cutting-edge artificial
+                <sup class="text-xs">[**]</sup>
+                intelligence techniques to reinterpret and
+                garde artists and intellectuals of that era,
+                revive their visionary ideas.
+            </h1>
+            <h1 class="text-[9vw] leading-none pt-[4vh] mb-[15vw]">By leveraging modern technology, we <sup
+                    class="text-xs">[***]</sup>
+                aim to uncover new perspectives on the
+                artistic, architectural, and cultural legacy
+                of Kharkiv Modernism.</h1>
+            <h3 class="text-sm mt-[1vw]">[*] — Collective name 1910-30 Kharkiv’s artists</h3>
+            <h3 class="text-sm mt-[1vw]">[**] — Main visual AI tool is</h3>
+            <h3 class="text-sm mt-[1vw]">[***] — Experiment produced by Obys</h3>
+        </div>
+        <div id="page3" class="hidden sm:block w-full h-screen relative">
+            <div class="w-[66.6%] h-full absolute flex pt-[3vw] pb-[.5vw] px-[.5vw]">
+                <div class="text2 w-[75%] h-full flex flex-col justify-between">
+                    <div>
+                        <div class="h-[9vw] overflow-hidden">
+                            <h1 class="text-[9vw] leading-none translate-y-full">Explore</h1>
+                        </div>
+                        <div class="h-[9vw] overflow-hidden">
+                            <h1 class="text-[9vw] leading-none translate-y-full">Experiment</h1>
+                        </div>
+                        <div
+                            class="learn hid opacity-0 flex justify-between w-[50%] border-t-[.1vw] border-black ml-[.5vw] mt-[4vw] py-[.3vw]">
+                            <h4 class="capitalize">learn more</h4>
+                            <div class="w-[1vw] flex justify-end overflow-hidden">
+                                <i class="ri-arrow-right-line transition-all"></i>
+                                <i class="ri-arrow-right-line transition-all"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div class="h-[9vw] overflow-hidden">
-                        <h1 class="text-[9vw] leading-none translate-y-full">Experiment</h1>
-                    </div>
-                    <div class="hid opacity-0 flex justify-between w-[50%] border-t-[.1vw] border-black ml-[.5vw] mt-[6vw] py-[.5vw]">
-                        <h4 class="capitalize">learn more</h4>
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
+                    <h4 class="pl-[.5vw]">Kharkiv Modernism × Obys × AI</h4>
                 </div>
-                <div class="hid opacity-0 w-[25%] h-full  flex flex-col justify-between">
-                    <h4 class="leading-none text-[1vw] h-[1vw] flex overflow-hidden"><span id="count"><h4>1</h4><h4>2</h4><h4>3</h4><h4>4</h4><h4>5</h4><h4>6</h4></span> — 6</h4>
-                    <div class=" flex gap-[3vw] leading-none text-[1vw]">
+                <div class="hid opacity-0 w-[25%] h-full pt-[1vw]  flex flex-col justify-between">
+                    <h4 class="leading-none text-[1vw] h-[1vw] flex overflow-hidden"><span id="count">
+                            <h4>1</h4>
+                            <h4>2</h4>
+                            <h4>3</h4>
+                            <h4>4</h4>
+                            <h4>5</h4>
+                            <h4>6</h4>
+                        </span> — 6</h4>
+                    <div class=" flex gap-[2.5vw] leading-none text-[1vw]">
                         <h4>[06] Featured:</h4>
                         <h4>Name: <br> <br>
                             Suprematista <br>
@@ -154,47 +229,121 @@
                     <h4 class="leading-none text-[1vw]">©2023</h4>
                 </div>
             </div>
-            <div class="overlay w-full h-full absolute top-0 left-0 flex">
+            <div class="overlay pointer-events-none w-full h-full absolute top-0 left-0 flex">
                 <div
-                    class="ig ig1 z-20 w-[calc(100%/3)] relative h-full bg-red-800 translate-y-[100%] bg-cover bg-center bg-[url('https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0dbbc3bde0877784da_home-slider-1-p-800.webp')]">
-                    <img class="h-full w-full object-cover absolute translate-y-[100%]"
+                    class="ig ig1 z-20 w-[calc(100%/3)] overflow-hidden relative h-full bg-red-800 translate-y-[100%] bg-cover bg-center">
+                    <img class="h-full defl w-full object-cover absolute top-0"
+                        src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0dbbc3bde0877784da_home-slider-1-p-800.webp"
+                        alt="">
+                    <img class="h-full im-1 w-full object-cover absolute translate-y-[100%]"
                         src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0ee783579004b21b74_home-slider-2-p-800.webp"
                         alt="">
-                    <img class="h-full w-full object-cover absolute translate-y-[100%]"
+                    <img class="h-full im-2 w-full object-cover absolute translate-y-[100%]"
                         src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d635f68c6d63d3a5f74_home-slider-3-p-800.webp"
                         alt="">
-                    <img class="h-full w-full object-cover absolute translate-y-[100%]"
+                    <img class="h-full im-3 w-full object-cover absolute translate-y-[100%]"
                         src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0d3961e504250c5556_home-slider-4.webp"
                         alt="">
-                    <img class="h-full w-full object-cover absolute translate-y-[100%]"
+                    <img class="h-full im-4 w-full object-cover absolute translate-y-[100%]"
                         src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0e5f68c6d63d3a2864_home-slider-5-p-800.webp"
                         alt="">
-                    <img class="h-full w-full object-cover absolute translate-y-[100%]"
+                    <img class="h-full im-5 w-full object-cover absolute translate-y-[100%]"
                         src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0e99dafb75c1177ba4_home-slider-5-1-p-800.webp"
                         alt="">
                 </div>
                 <div
-                    class="ig ig2 z-10 w-[calc(100%/3)] h-full bg-red-600 translate-y-[100%] bg-cover bg-center bg-[url(https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f625673fbbf85113d5882_Kosarev-art-1-6.webp)]">
+                    class="ig ig2 z-10 w-[calc(100%/3)] overflow-hidden h-full bg-red-600 translate-y-[100%] bg-cover bg-center bg-[url(https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f625673fbbf85113d5882_Kosarev-art-1-6.webp)]">
                 </div>
                 <div
-                    class="ig ig3 z-0 w-[calc(100%/3)] h-full bg-red-500 translate-y-[100%] bg-cover bg-center bg-[url(https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f62564099bffe03063b85_Kosarev-art-1-10.webp)]">
+                    class="ig ig3 z-0 w-[calc(100%/3)] overflow-hidden h-full bg-red-500 translate-y-[100%] bg-cover bg-center bg-[url(https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f62564099bffe03063b85_Kosarev-art-1-10.webp)]">
                 </div>
             </div>
         </div>
-        <div id="page4" class="w-full h-[120vh] flex flex-col justify-end px-[1vw]">
+        <div id="page3-mobile" class="relative z-30 bg-[#E7E4DF]  block sm:hidden w-full min-h-screen">
+            <img class="w-full h-full"
+                src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0dbbc3bde0877784da_home-slider-1-p-800.webp"
+                alt="">
+            <img class="w-full h-full"
+                src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0ecedb66e792ccc46f93_home-slider-7-p-800.webp"
+                alt="">
+            <img class="w-full h-full"
+                src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f62564099bffe03063b85_Kosarev-art-1-10-p-800.webp"
+                alt="">
+            <div class="w-full min-h-[65vh] p-[5vw] pt-[8.5vh]">
+                <h2 class="text-[15vw] leading-none ">Explore </h2>
+                <h2 class="text-[15vw] leading-none">Experiment</h2>
+                <div class="learn  flex justify-between w-full border-t-[.1vw] border-black  mt-[11vw] py-[1vw]">
+                    <h4 class="capitalize">learn more</h4>
+                    <div class="w-[5vw] flex justify-end overflow-hidden">
+                        <i class=" text-xl ri-arrow-right-line transition-all"></i>
+                        <i class=" text-xl ri-arrow-right-line transition-all"></i>
+                    </div>
+                </div>
+                <div class=" flex gap-[8vw] leading-none text-[4vw] mt-[15vh]">
+                    <h4>[06] Featured:</h4>
+                    <h4>Name: <br> <br>
+                        Suprematista <br>
+                        Buntesglas <br>
+                        Vierensee <br>
+                        Formen <br>
+                        Sesselbaa <br>
+                        Salzfeld</h4>
+                </div>
+                <div class="w-full mt-[5vh]">
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0dbbc3bde0877784da_home-slider-1-p-800.webp"
+                            alt="">
+                        <h3 class="p-[1vw]">Suprematist</h3>
+                    </div>
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0ee783579004b21b74_home-slider-2-p-800.webp"
+                            alt="">
+                            <h3 class="p-[1vw]">Buntesglas</h3>
+                    </div>
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d635f68c6d63d3a5f74_home-slider-3-p-800.webp"
+                            alt="">
+                        <h3 class="p-[1vw]">Vierensee</h3>
+                    </div>
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0d3961e504250c5556_home-slider-4-p-800.webp"
+                            alt="">
+                        <h3 class="p-[1vw]">Formen</h3>
+                    </div>
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0e5f68c6d63d3a2864_home-slider-5-p-800.webp"
+                            alt="">
+                        <h3 class="p-[1vw]">Sesselbaa</h3>
+                    </div>
+                    <div class="w-full mt-[5vh]">
+                        <img class="w-full h-full"
+                            src="https://assets-global.website-files.com/6543bb275c1f9a259661c7c8/655f0d0e99dafb75c1177ba4_home-slider-5-1-p-800.webp"
+                            alt="">
+                        <h3 class="p-[1vw]">Salzfeld</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="page4" class=" w-full h-[40vh] bg-[#E7E4DF] sm:h-[120vh] flex flex-col justify-end p-[5vw] sm:p-[0vw] sm:px-[1vw]">
             <div class="w-full h-[3vw] flex items-center justify-between">
-                <h4 class="font-thin text-[1vw]">An AI Experiment Based on the Kharkiv Modernism</h4>
-                <h4 class="font-thin text-[1vw]">Obys Agency ©2023</h4>
+                <h4 class="font-thin sm:text-[1vw] hidden sm:block">An AI Experiment Based on the Kharkiv Modernism</h4>
+                <h4 class="font-thin text-[4vw] mb-[4vw] sm:mb-[0vw] sm:text-[1vw]">Obys Agency ©2023</h4>
             </div>
             <div class="w-full h-[3vw] bg-[#141414]"></div>
             <div class="w-full h-[25vw] relative ">
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[7%] rotate-[59deg]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[20%]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[33.5%]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[47%]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[60%] -rotate-[59deg]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[73.4%] rotate-[59deg]"></div>
-                <div class="w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[86.5%]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[7%] rotate-[59deg]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[20%]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[33.5%]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[47%]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[60%] -rotate-[59deg]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[73.4%] rotate-[59deg]"></div>
+                <div class="w-[11.5vw] sm:w-[12.5vw] h-[22.5vw] bg-[#141414] absolute top-[5%] left-[86.5%]"></div>
             </div>
         </div>
     </div>
