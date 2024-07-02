@@ -10,23 +10,32 @@ function loader() {
             ease: "power4.in",
             duration: 1
         })
+        .to("#loader", {
+            y: "-100%",
+            duration: .6,
+            delay: .5,
+            ease: "power2.in",
+        }, "a")
         .to(".box", {
-            y: 460,
-            scale: 2,
-            display: "none",
-            duration: 1.4,
-            delay: .5
+            top: "-16.5%",
+            scale: 2.2,
+            duration: .8,
+            delay: .5,
+            ease: "power2.in",
         }, "a")
         .to(".strip", {
             backgroundColor: "#141414",
-            duration: .03,
+            duration: .1,
             delay: .8,
         }, "a")
-        .to("#loader", {
-            y: "-100%",
-            duration: 1,
-            delay: .5
-        }, "a")
+        .to(".box", {
+            display: "none",
+        }, "s")
+        .from(".st", {
+            opacity: 0,
+            duration: 0.2
+        }, "s")
+
         .to(".i1,.i2", {
             x: "-126%"
         }, "b")
@@ -68,9 +77,9 @@ function loader() {
             stagger: 0.2
         }, "c")
 
-
 }
 loader()
+
 function page1() {
     var tl1 = gsap.timeline({
         scrollTrigger: {
@@ -173,17 +182,6 @@ function page2() {
         })
 }
 
-gsap.to(".nav", {
-    top: "0%",
-    scrollTrigger: {
-        trigger: "#page1",
-        scroller: "body",
-        start: "50% top",
-        end: "60% top",
-        scrub: 1,
-    }
-})
-
 function page3() {
 
     var tll = gsap.timeline({
@@ -271,6 +269,14 @@ function page3() {
             y: "-100%",
             duration: 1
         }, "b")
+        .to(".t-1", {
+            opacity: .4,
+            duration: .3
+        }, "b")
+        .to(".t-2", {
+            opacity: 1,
+            duration: .3
+        }, "b")
         .to(".ig1 .im-1", {
             scale: 1.2,
             duration: 1
@@ -282,6 +288,14 @@ function page3() {
         .to("#count", {
             y: "-200%",
             duration: 1
+        }, "c")
+        .to(".t-2", {
+            opacity: .4,
+            duration: .3
+        }, "c")
+        .to(".t-3", {
+            opacity: 1,
+            duration: .3
         }, "c")
         .to(".ig1 .im-2", {
             scale: 1.2,
@@ -295,6 +309,14 @@ function page3() {
             y: "-300%",
             duration: 1
         }, "d")
+        .to(".t-3", {
+            opacity: .4,
+            duration: .3
+        }, "d")
+        .to(".t-4", {
+            opacity: 1,
+            duration: .3
+        }, "d")
         .to(".ig1 .im-3", {
             scale: 1.2,
             duration: 1
@@ -306,6 +328,14 @@ function page3() {
         .to("#count", {
             y: "-400%",
             duration: 1
+        }, "e")
+        .to(".t-4", {
+            opacity: .4,
+            duration: .3
+        }, "e")
+        .to(".t-5", {
+            opacity: 1,
+            duration: .3
         }, "e")
         .to(".ig1 .im-4", {
             scale: 1.2,
@@ -319,9 +349,27 @@ function page3() {
             y: "-500%",
             duration: 1
         }, "f")
+        .to(".t-5", {
+            opacity: .4,
+            duration: .3
+        }, "f")
+        .to(".t-6", {
+            opacity: 1,
+            duration: .3
+        }, "f")
 }
 
 function navigation() {
+    gsap.to(".nav", {
+        top: "0%",
+        scrollTrigger: {
+            trigger: "#page1",
+            scroller: "body",
+            start: "50% top",
+            end: "60% top",
+            scrub: 1,
+        }
+    })
     let navigation = document.querySelector("#navigation")
 
     var tlm = gsap.timeline({ paused: true })
@@ -348,9 +396,140 @@ function navigation() {
     })
 }
 navigation()
-
-if (!window.matchMedia("(max-width: 640px)").matches) {
-    page1()
-    page2()
-    page3()
+function scrollbtn() {
+    document.querySelector(".scrollbtn").addEventListener("click", function () {
+        gsap.to(window, {
+            duration: 1.2,
+            ease: "power2.in",
+            scrollTo: { y: window.innerHeight + 200 },
+        });
+    });
 }
+scrollbtn()
+function footerAnimation() {
+
+    var ft = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page4",
+            scroller: "body",
+            start: "top 10%",
+            end: "top -30%",
+            scrub: 1,
+            // markers: true
+        }
+    })
+
+    ft
+        .from(".fst", {
+            y: "100%",
+            stagger: {
+                amount: .8
+            },
+            duration: 1.5
+        })
+        .to(".st8", {
+            left: "120%",
+            duration: 1.5
+        }, "s")
+        .to(".st7", {
+            left: "89%",
+            duration: 1.5
+        }, "s")
+        .to(".st6", {
+            left: "77.5%",
+            rotate: 97,
+            duration: 1.5
+        }, "s")
+        .to(".st5", {
+            left: "65.5%",
+            rotate: "-97",
+            duration: 1.5
+        }, "s")
+        .to(".st4", {
+            left: "53.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st3", {
+            left: "39.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st2", {
+            left: "25.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st1", {
+            left: "13%",
+            rotate: 99,
+            duration: 1.5
+        }, "s")
+}
+
+function mobileFooterAnimation() {
+
+    var ft = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page4",
+            scroller: "body",
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 1,
+        }
+    })
+
+    ft
+        .from(".fst", {
+            y: "100%",
+            stagger: {
+                amount: .8
+            },
+            duration: 1.5
+        })
+        .to(".st8", {
+            left: "120%",
+            duration: 1.5
+        }, "s")
+        .to(".st7", {
+            left: "89%",
+            duration: 1.5
+        }, "s")
+        .to(".st6", {
+            left: "77.5%",
+            rotate: 53.8,
+            duration: 1.5
+        }, "s")
+        .to(".st5", {
+            left: "65.5%",
+            rotate: -53.8,
+            duration: 1.5
+        }, "s")
+        .to(".st4", {
+            left: "53.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st3", {
+            left: "39.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st2", {
+            left: "25.5%",
+            duration: 1.5
+        }, "s")
+        .to(".st1", {
+            left: "13%",
+            rotate: 54.9,
+            duration: 1.5
+        }, "s")
+}
+
+function animationHnadlerForResponsive() {
+    if (!window.matchMedia("(max-width: 640px)").matches) {
+        page1()
+        page2()
+        page3()
+        footerAnimation()
+    }
+    if (window.matchMedia("(max-width: 640px)").matches) {
+        mobileFooterAnimation()
+    }
+}
+animationHnadlerForResponsive()
