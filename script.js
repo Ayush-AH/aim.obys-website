@@ -1,7 +1,7 @@
 window.onbeforeunload = function () {
     window.scrollTo(0, 0)
 }
-function loader() {
+function loader(val) {
     var load = gsap.timeline()
     load
         .to(".strip", {
@@ -17,7 +17,7 @@ function loader() {
             ease: "power2.in",
         }, "a")
         .to(".box", {
-            top: "-16.5%",
+            top: `${val}%`,
             scale: 2.2,
             duration: .8,
             delay: .5,
@@ -78,7 +78,6 @@ function loader() {
         }, "c")
 
 }
-loader()
 
 function page1() {
     var tl1 = gsap.timeline({
@@ -527,9 +526,13 @@ function animationHnadlerForResponsive() {
         page2()
         page3()
         footerAnimation()
+        loader(-16.5)
+
     }
     if (window.matchMedia("(max-width: 640px)").matches) {
         mobileFooterAnimation()
+        loader(1)
+
     }
 }
 animationHnadlerForResponsive()
